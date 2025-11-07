@@ -16,21 +16,21 @@ export default function Navbar({ current, onNavigate }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-lg bg-rose-200 flex items-center justify-center text-rose-700 font-bold">SG</div>
+            <div className="h-10 w-10 rounded-lg bg-emerald-200 flex items-center justify-center text-emerald-700 font-bold">SG</div>
             <div>
-              <div className="text-lg font-semibold text-slate-800">St George’s House</div>
+              <div className="text-lg font-semibold text-slate-800 font-serif tracking-tight">St George’s House</div>
               <div className="text-xs text-slate-500">Residential Care Home</div>
             </div>
           </div>
-          <nav className="hidden md:flex items-center gap-2">
+          <nav className="hidden md:flex items-center gap-1">
             {tabs.map((t) => (
               <button
                 key={t.key}
                 onClick={() => onNavigate(t.key)}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 ${
                   current === t.key
-                    ? 'bg-rose-100 text-rose-800'
-                    : 'text-slate-700 hover:text-rose-700 hover:bg-rose-50'
+                    ? 'bg-emerald-600 text-white shadow-sm'
+                    : 'text-slate-700 hover:text-emerald-700 hover:bg-emerald-50'
                 }`}
                 aria-current={current === t.key ? 'page' : undefined}
               >
